@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>我的主页</title>
+<meta charset="UTF-8">
+<title>Animated Profile</title>
+<style>
+  body { background: #121212; color: #fff; font-family: sans-serif; text-align: center; }
+  .container { padding: 100px; }
+  h1 { font-size: 4rem; animation: fadein 1.5s ease-in-out; }
+  @keyframes fadein { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
+  a { color: #1E90FF; text-decoration: none; }
+</style>
 </head>
 <body>
-  <h1>欢迎来到我的 GitHub Pages 首页!</h1>
-  <p>Hello, world!</p>
+  <div class="container">
+    <h1>Hello 👋</h1>
+    <p>I am your name — a passionate developer!</p>
+    <p>Find me on GitHub: <a href="https://github.com/你的用户名">github.com/你的用户名</a></p>
+  </div>
 </body>
 </html>
