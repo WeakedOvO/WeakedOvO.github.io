@@ -1,21 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>Animated Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的个人主页</title>
 <style>
-  body { background: #121212; color: #fff; font-family: sans-serif; text-align: center; }
-  .container { padding: 100px; }
-  h1 { font-size: 4rem; animation: fadein 1.5s ease-in-out; }
-  @keyframes fadein { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
-  a { color: #1E90FF; text-decoration: none; }
+  /* ===== 全局样式 ===== */
+  body {
+    background: #121212;
+    color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  a {
+    color: #1E90FF;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  a:hover { color: #00BFFF; }
+
+  /* ===== 动画 ===== */
+  @keyframes fadein {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  .fadein { animation: fadein 1.5s ease-in-out; }
+
+  /* ===== 容器 ===== */
+  .container { padding: 80px 20px; max-width: 900px; margin: auto; }
+
+  /* ===== 标题 ===== */
+  h1 { font-size: 3.5rem; margin-bottom: 10px; }
+  h2 { font-size: 2rem; margin-top: 50px; margin-bottom: 20px; color: #00BFFF; }
+
+  /* ===== 介绍 ===== */
+  p { font-size: 1.2rem; line-height: 1.6; color: #ccc; }
+
+  /* ===== 项目列表 ===== */
+  .projects { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px; }
+  .project-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+  .project-card h3 { margin: 0 0 10px 0; color: #fff; }
+  .project-card p { color: #aaa; font-size: 1rem; }
+
+  /* ===== 社交链接 ===== */
+  .social { margin-top: 40px; }
+  .social a { margin: 0 15px; font-size: 1.5rem; }
 </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hello 👋</h1>
-    <p>I am your name — a passionate developer!</p>
-    <p>Find me on GitHub: <a href="https://github.com/你的用户名">github.com/你的用户名</a></p>
+
+<div class="container fadein">
+  <!-- 主页大标题 -->
+  <h1>你好，我是陈佳龙</h1>
+  <p>欢迎来到我的个人主页！我是人工智能研一在读学生，喜欢创造和探索。</p>
+
+  <!-- 关于我 -->
+  <h2>关于我</h2>
+  <p>多领域涉及，喜欢ACG文化，计算机和数学</p>
+
   </div>
+
+  <!-- 技能展示 -->
+  <h2>技能</h2>
+  <p>HTML, Python, Git</p>
+
+  <!-- 联系方式 -->
+  <h2>联系我</h2>
+  <div class="social">
+    <a href="https://github.com/WeakedOvO" target="_blank">GitHub</a>
+    <a href="abcyinzei@gmail.com">邮箱</a>
+  </div>
+</div>
+
 </body>
 </html>
